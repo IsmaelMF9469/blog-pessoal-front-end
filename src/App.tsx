@@ -1,26 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Text } from './components/text/Text';
-import ButtonAppBar from './components/Statics/navbar/NavBar';
-import { Footer } from './components/Statics/footer/Footer';
-import { Home } from './components/paginas/home/Home';
-import { About } from './components/paginas/about/About';
+import Footer from './components/Statics/footer/Footer';
+import Navbar from './components/Statics/navbar/NavBar';
+import CadastroUsuario from './paginas/cadastroUsuario/cadastroUsuario';
+import Home from './paginas/home/Home';
+import Login from './paginas/login/Login';
+
 
 function App() {
-  const nome = 'Ismael'
   return (
     <Router>
-      <ButtonAppBar />
+      <Navbar />
       <Routes>
-        <Route path='/' element= { <Home />} />
-        <Route path='/home' element= { <Home />} />
-        <Route path='/about' element= { <About />} />
+
+        <Route path="/" element={<Login  />} />
+
+        <Route path="/home" element={<Home />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
 
       </Routes>
       <Footer />
     </Router>
-    );
+
+  );
 }
 
 export default App;
