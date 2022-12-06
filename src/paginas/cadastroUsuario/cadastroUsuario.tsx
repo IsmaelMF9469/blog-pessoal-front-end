@@ -1,11 +1,11 @@
 import React , {useState, useEffect, ChangeEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Grid, Typography, Button, TextField } from '@material-ui/core';
+import { useNavigate } from 'react-router';
+import User from '../../models/User';
+import { cadastroUsuario } from '../../services/Service';
+import { Grid,Typography, Button, TextField } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
-import { cadastroUsuario } from '../../services/Service';
-import User from '../../models/User';
 
 function CadastroUsuario() {
 
